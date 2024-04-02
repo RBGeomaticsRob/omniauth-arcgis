@@ -7,8 +7,8 @@ module OmniAuth
 
       option :client_options, {
         :site => 'https://www.arcgis.com',
-        :authorize_url => 'https://www.arcgis.com/sharing/oauth2/authorize',
-        :token_url => 'https://www.arcgis.com/sharing/oauth2/token'
+        :authorize_url => 'https://www.arcgis.com/sharing/rest/oauth2/authorize',
+        :token_url => 'https://www.arcgis.com/sharing/rest/oauth2/token/'
       }
 
       # Force the access token response to be parsed as JSON even though the content type header response is text/plain
