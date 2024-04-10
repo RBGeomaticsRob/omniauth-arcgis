@@ -38,6 +38,12 @@ module OmniAuth
       def raw_info
         @raw_info ||= access_token.get('/sharing/rest/portals/self', {:parse => :json, :params => {:f => 'json', :token => access_token.token}}).parsed
       end
+      
+      def token_params
+        super.tap do |params|
+          params.client_secret = options.client_secret
+        end
+      end
     end
   end
 end
