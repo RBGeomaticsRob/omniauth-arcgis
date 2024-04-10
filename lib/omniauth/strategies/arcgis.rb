@@ -36,7 +36,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.post('/sharing/rest/portals/self', {:parse => :json, :params => {:f => 'json', :token => access_token.token}}).parsed
+        @raw_info ||= access_token.get('/sharing/rest/portals/self', {:parse => :json, :params => {:f => 'json', :token => access_token.token}}).parsed
       end
     end
   end
