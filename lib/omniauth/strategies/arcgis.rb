@@ -41,7 +41,7 @@ module OmniAuth
       
       def token_params
         super.tap do |params|
-          params.client_secret = options.client_secret
+          params.client_id = options.client_id
         end
       end
     end
