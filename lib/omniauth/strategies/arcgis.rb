@@ -42,6 +42,8 @@ module OmniAuth
       def token_params
         super.tap do |params|
           params.client_id = options.client_id
+          params.redirect_uri = options.redirect_uri
+          params.response_type = options.response_type
         end
       end
     end
